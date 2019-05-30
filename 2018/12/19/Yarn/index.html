@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="CountLee&#39;s blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+    <!--Title-->
+
+
+<title>Yarn--快速、可靠、安全的依赖管理工具。 | CountLee&#39;s blog</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="CountLee&#39;s blog" type="application/atom+xml">
+
+
+    <link rel="icon" href="/timg.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="John Doe">
+            <img src="/timg.ico" alt="Count Lee" title="Count Lee" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 以梦为马，不负韶华 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">CountLee&#39;s blog</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Yarn--快速、可靠、安全的依赖管理工具。">
+            
+	            Yarn--快速、可靠、安全的依赖管理工具。
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/工具">
+            工具
+        </a>
+    </span>
+    
+
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/yarn" title="yarn">
+                        yarn
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/12/19</span>
+        </span>
+        
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>Yarn 是 Facebook, Google, Exponent 和 Tilde 开发的一款新的 JavaScript 包管理工具。就像我们可以从官方文档了解那样，它的目的是解决这些团队使用 npm 面临的少数问题，即：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.安装的时候无法保证速度/一致性</span><br><span class="line">2.安全问题，因为 npm 安装时允许运行代码</span><br></pre></td></tr></table></figure></p>
+<p>Yarn 同样是一个从 npm 注册源获取模块的新的 CLI 客户端。注册的方式不会有任何变化 —— 你同样可以正常获取与发布包。</p>
+<h2 id="一、-安装"><a href="#一、-安装" class="headerlink" title="一、 安装"></a>一、 安装</h2><pre><code>此次安装说明只针对macOS环境
+</code></pre><h3 id="1-1-Homebrew"><a href="#1-1-Homebrew" class="headerlink" title="1.1 Homebrew"></a>1.1 Homebrew</h3><p>你可以通过 <a href="https://brew.sh/index_zh-cn" target="_blank" rel="noopener">Homebrew</a> 包管理工具 安装 Yarn。 如果你还未安装 Node.js，Homebrew 会自动为你安装。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install yarn</span><br></pre></td></tr></table></figure></p>
+<p>如果你是 <a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a> 或类似工具，你应当避免安装 Node.js ，以便使用 nvm 版本的 Node.js 。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install yarn --without-node</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-2-MacPorts"><a href="#1-2-MacPorts" class="headerlink" title="1.2 MacPorts"></a>1.2 MacPorts</h3><p>你可以通过 <a href="https://www.macports.org/" target="_blank" rel="noopener">MacPorts</a> 安装 Yarn 。 如果你还未安装 Node.js ， MacPorts 会自动为你安装。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo port install yarn</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-3-路径设置"><a href="#1-3-路径设置" class="headerlink" title="1.3 路径设置"></a>1.3 路径设置</h3><p>如果未在 PATH 环境变量中找到 yarn，请按照以下步骤添加 yarn 到 PATH 环境变量中，使其可随处运行。</p>
+<pre><code>注意：您的配置文件可能是 `.profile` 、 `.bash_profile` 、 `.bashrc` 、 `.zshrc` 等。
+</code></pre><ol>
+<li>将此项加入您的配置文件： <code>export PATH=&quot;$PATH:/opt/yarn-[version]/bin&quot;</code> （路径可能根据您安装 Yarn 的位置而有差异）</li>
+<li>在终端中，执行登录并登出以使更改生效</li>
+</ol>
+<p>为了可以全局访问 Yarn 的可执行文件，需要在您的终端中设置 <code>PATH</code> 环境变量。若要执行此操作，请添加 <code>export PATH=&quot;$PATH:</code>yarn global bin<code>&quot;</code> 到您的配置文件中。</p>
+<h3 id="1-4-升级-Yarn"><a href="#1-4-升级-Yarn" class="headerlink" title="1.4 升级 Yarn"></a>1.4 升级 Yarn</h3><p>有新版时，Yarn会给你提示。如需升级 Yarn，仍然可以通过 Homebrew 来升级。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew upgrade yarn</span><br></pre></td></tr></table></figure></p>
+<p>通过如下命令测试 Yarn 是否安装成功：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn --version</span><br></pre></td></tr></table></figure></p>
+<h2 id="二、-使用方法"><a href="#二、-使用方法" class="headerlink" title="二、 使用方法"></a>二、 使用方法</h2><p>现在 Yarn 已经安装完毕，可以开始使用了。以下是最常用的命令：<br><strong>初始化一个新项目</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn init</span><br></pre></td></tr></table></figure></p>
+<p><strong>添加依赖包</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn add [package]</span><br><span class="line">yarn add [package]@[version]</span><br><span class="line">yarn add [package]@[tag]</span><br></pre></td></tr></table></figure></p>
+<p><strong>将依赖项添加到不同依赖项类别中</strong><br>分别添加到 devDependencies、peerDependencies 和 optionalDependencies 类别中：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn add [package] --dev</span><br><span class="line">yarn add [package] --peer</span><br><span class="line">yarn add [package] --optional</span><br></pre></td></tr></table></figure></p>
+<p><strong>升级依赖包</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn upgrade [package]</span><br><span class="line">yarn upgrade [package]@[version]</span><br><span class="line">yarn upgrade [package]@[tag]</span><br></pre></td></tr></table></figure></p>
+<p><strong>移除依赖包</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn remove [package]</span><br></pre></td></tr></table></figure></p>
+<p><strong>安装项目的全部依赖</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn</span><br></pre></td></tr></table></figure></p>
+<p>或者<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn install</span><br></pre></td></tr></table></figure></p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2018/12/18/ES6/" class="next-post btn btn-default" title="ES6基础">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">ES6基础</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">Table of Contents</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、-安装"><span class="toc-text">一、 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Homebrew"><span class="toc-text">1.1 Homebrew</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-MacPorts"><span class="toc-text">1.2 MacPorts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-路径设置"><span class="toc-text">1.3 路径设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-升级-Yarn"><span class="toc-text">1.4 升级 Yarn</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、-使用方法"><span class="toc-text">二、 使用方法</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>

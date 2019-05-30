@@ -1,0 +1,322 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="CountLee&#39;s blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+    <!--Title-->
+
+
+<title>ES6基础 | CountLee&#39;s blog</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="CountLee&#39;s blog" type="application/atom+xml">
+
+
+    <link rel="icon" href="/timg.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="John Doe">
+            <img src="/timg.ico" alt="Count Lee" title="Count Lee" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 以梦为马，不负韶华 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">CountLee&#39;s blog</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="ES6基础">
+            
+	            ES6基础
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
+    
+
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/es6" title="es6">
+                        es6
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/12/18</span>
+        </span>
+        
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="一、变量声明let和const"><a href="#一、变量声明let和const" class="headerlink" title="一、变量声明let和const"></a>一、变量声明let和const</h2><p>我们都是知道在ES6以前，var关键字声明变量。无论声明在何处，都会被视为声明在函数的最顶部(不在函数内即在全局作用域的最顶部)。这就是函数变量提升例如:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">aa</span></span>() &#123;</span><br><span class="line">    <span class="keyword">if</span>(bool) &#123;</span><br><span class="line">        var <span class="built_in">test</span> = <span class="string">'hello man'</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        console.log(<span class="built_in">test</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>以上的代码实际上是：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">aa</span></span>() &#123;</span><br><span class="line">    var <span class="built_in">test</span> // 变量提升</span><br><span class="line">    <span class="keyword">if</span>(bool) &#123;</span><br><span class="line">        <span class="built_in">test</span> = <span class="string">'hello man'</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        //此处访问<span class="built_in">test</span> 值为undefined</span><br><span class="line">        console.log(<span class="built_in">test</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    //此处访问<span class="built_in">test</span> 值为undefined</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>所以不用关心bool是否为true or false。实际上，无论如何test都会被创建声明。</p>
+<p>接下来ES6主角登场：<br>我们通常用let和const来声明，let表示变量、const表示常量。let和const都是块级作用域。怎么理解这个块级作用域？</p>
+<p>在一个函数内部<br>在一个代码块内部<br>说白了 {}大括号内的代码块即为let 和 const的作用域。</p>
+<p>看以下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">aa</span></span>() &#123;</span><br><span class="line">   <span class="keyword">if</span>(bool) &#123;</span><br><span class="line">      <span class="built_in">let</span> <span class="built_in">test</span> = <span class="string">'hello man'</span></span><br><span class="line">   &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">       //<span class="built_in">test</span> 在此处访问不到</span><br><span class="line">       console.log(<span class="built_in">test</span>)</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>let的作用域是在它所在当前代码块，但不会被提升到当前函数的最顶部。</p>
+<p>再来说说const。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const name = <span class="string">'lux'</span></span><br><span class="line">   name = <span class="string">'joe'</span> //再次赋值此时会报错</span><br></pre></td></tr></table></figure>
+<p>说一道面试题</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var funcs = []</span><br><span class="line">    <span class="keyword">for</span> (var i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">        funcs.push(<span class="function"><span class="title">function</span></span>() &#123; console.log(i) &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    funcs.forEach(<span class="keyword">function</span>(func) &#123;</span><br><span class="line">        func()</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+<p>这样的面试题是大家常见，很多同学一看就知道输出 10 十次<br>但是如果我们想依次输出0到9呢？两种解决方法。直接上代码。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// ES5告诉我们可以利用闭包解决这个问题</span><br><span class="line">    var funcs = []</span><br><span class="line">    <span class="keyword">for</span> (var i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">        func.push((<span class="keyword">function</span>(value) &#123;</span><br><span class="line">            <span class="built_in">return</span> <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">                console.log(value)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;(i)))</span><br><span class="line">    &#125;</span><br><span class="line">    // es6</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">        func.push(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">            console.log(i)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>达到相同的效果，es6简洁的解决方案是不是更让你心动！！！</p>
+<h2 id="二、模板字符串"><a href="#二、模板字符串" class="headerlink" title="二、模板字符串"></a>二、模板字符串</h2><p>es6模板字符简直是开发者的福音啊，解决了ES5在字符串功能上的痛点。</p>
+<p>第一个用途，基本的字符串格式化。将表达式嵌入字符串中进行拼接。用${}来界定。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//es5 </span><br><span class="line">   var name = <span class="string">'lux'</span></span><br><span class="line">   console.log(<span class="string">'hello'</span> + name)</span><br><span class="line">   //es6</span><br><span class="line">   const name = <span class="string">'lux'</span></span><br><span class="line">   console.log(`hello <span class="variable">$&#123;name&#125;</span>`) //hello lux</span><br></pre></td></tr></table></figure>
+<p>第二个用途，在ES5时我们通过反斜杠()来做多行字符串或者字符串一行行拼接。ES6反引号(<code></code>)直接搞定。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// es5</span><br><span class="line">  var msg = <span class="string">"Hi \</span></span><br><span class="line"><span class="string">  man!</span></span><br><span class="line"><span class="string">  "</span></span><br><span class="line">  // es6</span><br><span class="line">  const template = `&lt;div&gt;</span><br><span class="line">      &lt;span&gt;hello world&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;`</span><br></pre></td></tr></table></figure></p>
+<p>对于字符串es6当然也提供了很多厉害的方法。说几个常用的。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 1.includes：判断是否包含然后直接返回布尔值</span><br><span class="line">    <span class="built_in">let</span> str = <span class="string">'hahay'</span></span><br><span class="line">    console.log(str.includes(<span class="string">'y'</span>)) // <span class="literal">true</span></span><br><span class="line">    // 2.repeat: 获取字符串重复n次</span><br><span class="line">    <span class="built_in">let</span> s = <span class="string">'he'</span></span><br><span class="line">    console.log(s.repeat(3)) // <span class="string">'hehehe'</span></span><br><span class="line">    //如果你带入小数, Math.floor(num) 来处理</span><br></pre></td></tr></table></figure></p>
+<h2 id="三、函数"><a href="#三、函数" class="headerlink" title="三、函数"></a>三、函数</h2><p>函数默认参数<br>在ES5我们给函数定义参数默认值是怎么样？<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> action(num) &#123;</span><br><span class="line">       num = num || 200</span><br><span class="line">       //当传入num时，num为传入的值</span><br><span class="line">       //当没传入参数时，num即有了默认值200</span><br><span class="line">       <span class="built_in">return</span> num</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>但细心观察的同学们肯定会发现，num传入为0的时候就是false， 此时num = 200 与我们的实际要的效果明显不一样<br>ES6为参数提供了默认值。在定义函数时便初始化了这个参数，以便在参数没有被传递进去时使用。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> action(num = 200) &#123;</span><br><span class="line">       console.log(num)</span><br><span class="line">   &#125;</span><br><span class="line">   action() //200</span><br><span class="line">   action(300) //300</span><br></pre></td></tr></table></figure></p>
+<p>箭头函数<br>ES6很有意思的一部分就是函数的快捷写法。也就是箭头函数。<br>箭头函数最直观的三个特点。<br>不需要function关键字来创建函数<br>省略return关键字<br>继承当前上下文的 this 关键字<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//例如：</span><br><span class="line">    [1,2,3].map( x =&gt; x + 1 )</span><br><span class="line">//等同于：</span><br><span class="line">    [1,2,3].map((<span class="keyword">function</span>(x)&#123;</span><br><span class="line">        <span class="built_in">return</span> x + 1</span><br><span class="line">    &#125;).<span class="built_in">bind</span>(this))</span><br></pre></td></tr></table></figure></p>
+<p>说个小细节。<br>当你的函数有且仅有一个参数的时候，是可以省略掉括号的。当你函数返回有且仅有一个表达式的时候可以省略{}；例如:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var people = name =&gt; <span class="string">'hello'</span> + name</span><br><span class="line">   //参数name就没有括号</span><br></pre></td></tr></table></figure></p>
+<p>作为参考<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var people = (name, age) =&gt; &#123;</span><br><span class="line">      const fullName = <span class="string">'h'</span> + name</span><br><span class="line">      <span class="built_in">return</span> fullName</span><br><span class="line">  &#125; </span><br><span class="line">  //如果缺少()或者&#123;&#125;就会报错</span><br></pre></td></tr></table></figure></p>
+<h2 id="四、拓展的对象功能"><a href="#四、拓展的对象功能" class="headerlink" title="四、拓展的对象功能"></a>四、拓展的对象功能</h2><p>对象初始化简写<br>ES5我们对于对象都是以键值对的形式书写，是有可能出现键值对重名的。例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> people(name, age) &#123;</span><br><span class="line">       <span class="built_in">return</span> &#123;</span><br><span class="line">           name: name,</span><br><span class="line">           age: age</span><br><span class="line">       &#125;;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>键值对重名，ES6可以简写如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> people(name, age) &#123;</span><br><span class="line">      <span class="built_in">return</span> &#123;</span><br><span class="line">          name,</span><br><span class="line">          age</span><br><span class="line">      &#125;;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<p>ES6 同样改进了为对象字面量方法赋值的语法。ES5为对象添加方法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const people = &#123;</span><br><span class="line">       name: <span class="string">'lux'</span>,</span><br><span class="line">       getName: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">           console.log(this.name)</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>ES6通过省略冒号与 function 关键字，将这个语法变得更简洁<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const people = &#123;</span><br><span class="line">       name: <span class="string">'lux'</span>,</span><br><span class="line">       <span class="function"><span class="title">getName</span></span> () &#123;</span><br><span class="line">           console.log(this.name)</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>ES6 对象提供了Object.assign()这个方法来实现浅复制。Object.assign()可以把任意多个源对象自身可枚举的属性拷贝给目标对象，然后返回目标对象。第一参数即为目标对象。在实际项目中，我们为了不改变源对象。一般会把目标对象传为{}<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const obj = Object.assign(&#123;&#125;, objA, objB)</span><br></pre></td></tr></table></figure></p>
+<h2 id="五、更方便的数据访问–解构"><a href="#五、更方便的数据访问–解构" class="headerlink" title="五、更方便的数据访问–解构"></a>五、更方便的数据访问–解构</h2><p>数组和对象是JS中最常用也是最重要表示形式。为了简化提取信息，ES6新增了解构，这是将一个数据结构分解为更小的部分的过程<br>ES5我们提取对象中的信息形式如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const people = &#123;</span><br><span class="line">        name: <span class="string">'lux'</span>,</span><br><span class="line">        age: 20</span><br><span class="line">    &#125;</span><br><span class="line">    const name = people.name</span><br><span class="line">    const age = people.age</span><br><span class="line">    console.log(name + <span class="string">' --- '</span> + age)</span><br></pre></td></tr></table></figure></p>
+<p>是不是觉得很熟悉，没错，在ES6之前我们就是这样获取对象信息的，一个一个获取。现在，解构能让我们从对象或者数组里取出数据存为变量，例如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//对象</span><br><span class="line">    const people = &#123;</span><br><span class="line">        name: <span class="string">'lux'</span>,</span><br><span class="line">        age: 20</span><br><span class="line">    &#125;</span><br><span class="line">    const &#123; name, age &#125; = people</span><br><span class="line">    console.log(`<span class="variable">$&#123;name&#125;</span> --- <span class="variable">$&#123;age&#125;</span>`)</span><br><span class="line">    //数组</span><br><span class="line">    const color = [<span class="string">'red'</span>, <span class="string">'blue'</span>]</span><br><span class="line">    const [first, second] = color</span><br><span class="line">    console.log(first) //<span class="string">'red'</span></span><br><span class="line">    console.log(second) //<span class="string">'blue'</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="六、Spread-Operator-展开运算符"><a href="#六、Spread-Operator-展开运算符" class="headerlink" title="六、Spread Operator 展开运算符"></a>六、Spread Operator 展开运算符</h2><p>ES6中另外一个好玩的特性就是Spread Operator 也是三个点儿…接下来就展示一下它的用途。<br>组装对象或者数组<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//数组</span><br><span class="line">    const color = [<span class="string">'red'</span>, <span class="string">'yellow'</span>]</span><br><span class="line">    const colorful = [...color, <span class="string">'green'</span>, <span class="string">'pink'</span>]</span><br><span class="line">    console.log(colorful) //[red, yellow, green, pink]</span><br><span class="line">    //对象</span><br><span class="line">    const alp = &#123; fist: <span class="string">'a'</span>, second: <span class="string">'b'</span>&#125;</span><br><span class="line">    const alphabets = &#123; ...alp, third: <span class="string">'c'</span> &#125;</span><br><span class="line">    console.log(alphabets) //&#123; <span class="string">"fist"</span>: <span class="string">"a"</span>, <span class="string">"second"</span>: <span class="string">"b"</span>, <span class="string">"third"</span>: <span class="string">"c"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>有时候我们想获取数组或者对象除了前几项或者除了某几项的其他项<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const number = [1,2,3,4,5]</span><br><span class="line">    const [first, ...rest] = number</span><br><span class="line">    console.log(rest) //2,3,4,5</span><br><span class="line">    //对象</span><br><span class="line">    const user = &#123;</span><br><span class="line">        username: <span class="string">'lux'</span>,</span><br><span class="line">        gender: <span class="string">'female'</span>,</span><br><span class="line">        age: 19,</span><br><span class="line">        address: <span class="string">'peking'</span></span><br><span class="line">    &#125;</span><br><span class="line">    const &#123; username, ...rest &#125; = user</span><br><span class="line">    console.log(rest) //&#123;<span class="string">"address"</span>: <span class="string">"peking"</span>, <span class="string">"age"</span>: 19, <span class="string">"gender"</span>: <span class="string">"female"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>对于 Object 而言，还可以用于组合成新的 Object 。(ES2017 stage-2 proposal) 当然如果有重复的属性名，右边覆盖左边<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const first = &#123;</span><br><span class="line">        a: 1,</span><br><span class="line">        b: 2,</span><br><span class="line">        c: 6,</span><br><span class="line">    &#125;</span><br><span class="line">    const second = &#123;</span><br><span class="line">        c: 3,</span><br><span class="line">        d: 4</span><br><span class="line">    &#125;</span><br><span class="line">    const total = &#123; ...first, ...second &#125;</span><br><span class="line">    console.log(total) // &#123; a: 1, b: 2, c: 3, d: 4 &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="七、import-和-export"><a href="#七、import-和-export" class="headerlink" title="七、import 和 export"></a>七、import 和 export</h2><p>import导入模块、export导出模块<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//全部导入</span><br><span class="line">import people from <span class="string">'./example'</span></span><br><span class="line">//有一种特殊情况，即允许你将整个模块当作单一对象进行导入</span><br><span class="line">//该模块的所有导出都会作为对象的属性存在</span><br><span class="line">import * as example from <span class="string">"./example.js"</span></span><br><span class="line">console.log(example.name)</span><br><span class="line">console.log(example.age)</span><br><span class="line">console.log(example.getName())</span><br><span class="line">//导入部分</span><br><span class="line">import &#123;name, age&#125; from <span class="string">'./example'</span></span><br><span class="line">// 导出默认, 有且只有一个默认</span><br><span class="line"><span class="built_in">export</span> default App</span><br><span class="line">// 部分导出</span><br><span class="line"><span class="built_in">export</span> class App extend Component &#123;&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>以前有人问我，导入的时候有没有大括号的区别是什么。下面是我在工作中的总结：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.当用<span class="built_in">export</span> default people导出时，就用 import people 导入（不带大括号）</span><br><span class="line">2.一个文件里，有且只能有一个<span class="built_in">export</span> default。但可以有多个<span class="built_in">export</span>。</span><br><span class="line">3.当用<span class="built_in">export</span> name 时，就用import &#123; name &#125;导入（记得带上大括号）</span><br><span class="line">4.当一个文件里，既有一个<span class="built_in">export</span> default people, 又有多个<span class="built_in">export</span> name 或者 <span class="built_in">export</span> age时，导入就用 import people, &#123; name, age &#125; </span><br><span class="line">5.当一个文件里出现n多个 <span class="built_in">export</span> 导出很多模块，导入时除了一个一个导入，也可以用import * as example</span><br></pre></td></tr></table></figure></p>
+<h2 id="八、Promise"><a href="#八、Promise" class="headerlink" title="八、Promise"></a>八、Promise</h2><p>在promise之前代码过多的回调或者嵌套，可读性差、耦合度高、扩展性低。通过Promise机制，扁平化的代码机构，大大提高了代码可读性；用同步编程的方式来编写异步代码，保存线性的代码逻辑，极大的降低了代码耦合性而提高了程序的可扩展性。<br>说白了就是用同步的方式去写异步代码。<br>发起异步请求<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'/api/todos'</span>)</span><br><span class="line">     .<span class="keyword">then</span>(res =&gt; res.json())</span><br><span class="line">     .<span class="keyword">then</span>(data =&gt; (&#123; data &#125;))</span><br><span class="line">     .catch(err =&gt; (&#123; err &#125;));</span><br></pre></td></tr></table></figure></p>
+<p>很有意思的一道面试题<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">      console.log(1)</span><br><span class="line">    &#125;, 0);</span><br><span class="line">    new Promise(<span class="keyword">function</span> executor(resolve) &#123;</span><br><span class="line">      console.log(2);</span><br><span class="line">      <span class="keyword">for</span>( var i=0 ; i&lt;10000 ; i++ ) &#123;</span><br><span class="line">        i == 9999 &amp;&amp; resolve();</span><br><span class="line">      &#125;</span><br><span class="line">      console.log(3);</span><br><span class="line">    &#125;).<span class="keyword">then</span>(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">      console.log(4);</span><br><span class="line">    &#125;);</span><br><span class="line">    console.log(5);</span><br></pre></td></tr></table></figure></p>
+<p>Excuse me？这是在搞事！<br>当然以上promise的知识点，这个只是冰山一角。需要更多地去学习应用。</p>
+<h2 id="九、Generators"><a href="#九、Generators" class="headerlink" title="九、Generators"></a>九、Generators</h2><p>生成器（ generator）是能返回一个迭代器的函数。生成器函数也是一种函数，最直观的表现就是比普通的function多了个星号*，在其函数体内可以使用yield关键字,有意思的是函数会在每个yield后暂停。<br>这里生活中有一个比较形象的例子。咱们到银行办理业务时候都得向大厅的机器取一张排队号。你拿到你的排队号，机器并不会自动为你再出下一张票。也就是说取票机“暂停”住了，直到下一个人再次唤起才会继续吐票。<br>OK。说说迭代器。当你调用一个generator时，它将返回一个迭代器对象。这个迭代器对象拥有一个叫做next的方法来帮助你重启generator函数并得到下一个值。next方法不仅返回值，它返回的对象具有两个属性：done和value。value是你获得的值，done用来表明你的generator是否已经停止提供值。继续用刚刚取票的例子，每张排队号就是这里的value，打印票的纸是否用完就这是这里的done。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 生成器</span><br><span class="line">    <span class="keyword">function</span> *<span class="function"><span class="title">createIterator</span></span>() &#123;</span><br><span class="line">        yield 1;</span><br><span class="line">        yield 2;</span><br><span class="line">        yield 3;</span><br><span class="line">    &#125;</span><br><span class="line">    // 生成器能像正规函数那样被调用，但会返回一个迭代器</span><br><span class="line">    <span class="built_in">let</span> iterator = createIterator();</span><br><span class="line">    console.log(iterator.next().value); // 1</span><br><span class="line">    console.log(iterator.next().value); // 2</span><br><span class="line">    console.log(iterator.next().value); // 3</span><br></pre></td></tr></table></figure></p>
+<p>那生成器和迭代器又有什么用处呢？<br>围绕着生成器的许多兴奋点都与异步编程直接相关。异步调用对于我们来说是很困难的事，我们的函数并不会等待异步调用完再执行，你可能会想到用回调函数，（当然还有其他方案比如Promise比如Async/await）。<br>生成器可以让我们的代码进行等待。就不用嵌套的回调函数。使用generator可以确保当异步调用在我们的generator函数运行一下行代码之前完成时暂停函数的执行。<br>那么问题来了，咱们也不能手动一直调用next()方法，你需要一个能够调用生成器并启动迭代器的方法。就像这样子的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> run(taskDef) &#123; //taskDef即一个生成器函数</span><br><span class="line">        // 创建迭代器，让它在别处可用</span><br><span class="line">        <span class="built_in">let</span> task = taskDef();</span><br><span class="line">        // 启动任务</span><br><span class="line">        <span class="built_in">let</span> result = task.next();</span><br><span class="line">        // 递归使用函数来保持对 next() 的调用</span><br><span class="line">        <span class="keyword">function</span> <span class="function"><span class="title">step</span></span>() &#123;</span><br><span class="line">            // 如果还有更多要做的</span><br><span class="line">            <span class="keyword">if</span> (!result.done) &#123;</span><br><span class="line">                result = task.next();</span><br><span class="line">                step();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 开始处理过程</span><br><span class="line">        step();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>生成器与迭代器最有趣、最令人激动的方面，或许就是可创建外观清晰的异步操作代码。你不必到处使用回调函数，而是可以建立貌似同步的代码，但实际上却使用 yield 来等待异步操作结束。<br>总结<br>ES6的特性远不止于此，但对于我们日常的开发开说。这已经是够够的了。还有很多有意思的方法。比如findIndex…等等。包括用set来完成面试题常客数组去重问题。我和我的小伙伴们都惊呆了!</p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/12/19/Yarn/" class="pre-post btn btn-default" title="Yarn--快速、可靠、安全的依赖管理工具。">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">Yarn--快速、可靠、安全的依赖管理工具。</span>
+        </a>
+    
+    
+        <a href="/2018/12/18/Git/" class="next-post btn btn-default" title="Git常用命令">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">Git常用命令</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+   <p>评论系统未开启，无法评论！</p>
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">Table of Contents</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、变量声明let和const"><span class="toc-text">一、变量声明let和const</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、模板字符串"><span class="toc-text">二、模板字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、函数"><span class="toc-text">三、函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、拓展的对象功能"><span class="toc-text">四、拓展的对象功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、更方便的数据访问–解构"><span class="toc-text">五、更方便的数据访问–解构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、Spread-Operator-展开运算符"><span class="toc-text">六、Spread Operator 展开运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、import-和-export"><span class="toc-text">七、import 和 export</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、Promise"><span class="toc-text">八、Promise</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#九、Generators"><span class="toc-text">九、Generators</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>
